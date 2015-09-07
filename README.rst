@@ -4,17 +4,26 @@
 
 これは `Twilog <http://twilog.org/>`_ をスクレイピングするためのライブラリ/クライアントツールです。
 
+Warning
+=======
+
+`Skyscraper <https://github.com/nathell/skyscraper>`_ に依存していますが、僕の修正が取り込まれたバージョンがリリースされていないので Skyscraper の master を自力で ``lein install`` しないとこのツールはまともに動きません( 2 週間以内にはリリースされる気がするけど…)。
+
 Usage
 =====
 
-as a library
+As a library
 ------------
 
-ライブラリとして使う場合
+ライブラリとして使う場合は以下を ``project.clj`` の ``:dependencies`` へと追加
+
+.. sourcecode:: clojure
+
+  [twilog-scraper "0.1.0-SNAPSHOT"]
 
 
 
-as a client tool
+As a client tool
 ----------------
 
 クライアントツールとして使う場合
