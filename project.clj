@@ -1,6 +1,6 @@
 (defproject twilog-scraper "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Scraping library/cli tool just for Twilog"
+  :url "https://github.com/ayato-p/twilog-scraper"
   :license {:name "MIT"}
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [skyscraper "0.1.1"]

@@ -7,23 +7,6 @@
   (fn [res]
     (handler (take max res))))
 
-(def ^:private from+until-format
-  (tf/formatter "yyyyMMdd"))
-
-(defn wrap-from [handler from]
-  (let [from (tc/to-date (tf/parse-local from+until-format from))]
-    (fn [res]
-      (let [c #(pos? (compare (get-in % [:tweet-content :posted-at])
-                              from))]
-        (handler (take-while c res))))))
-
-(defn wrap-until [handler until]
-  (let [until (tc/to-date (t/plus (tf/parse-local from+until-format until) (t/days 1)))]
-    (fn [res]
-      (let [c #(pos? (compare (get-in % [:tweet-content :posted-at])
-                              until))]
-        (handler (drop-while c res))))))
-
 (def ^:private posted-at-format
   (tf/formatter "yyyyMMdd HH:mm:ss"))
 
