@@ -2,6 +2,9 @@
  Twilog scraper
 ================
 
+.. image:: http://clojars.org/ayato_p/twilog-scraper/latest-version.svg
+           :target: http://clojars.org/ayato_p/twilog-scraper
+
 これは `Twilog <http://twilog.org/>`_ をスクレイピングするためのライブラリ/クライアントツールです。
 
 Warning
