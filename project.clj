@@ -8,4 +8,6 @@
                  [clj-time "0.11.0"]]
   :uberjar-name "twilog-scraper.jar"
   :main twilog-scraper.main
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:dev {:source-paths ["env/exec"]}
+             :uberjar {:aot :all
+                       :source-paths ["env/exec"]}})

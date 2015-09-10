@@ -90,9 +90,9 @@
       (wrap m/wrap-take (:max options))
       m/wrap-ignore-secret-tweet))
 
-(defn scrape [username {:as options
-                        :keys [html-cache processed-cache from until]
-                        :or {html-cache true processed-cache true
-                             from "00000000" until "99999999"}}]
+(defn scrape [username & [{:as options
+                           :keys [html-cache processed-cache from until]
+                           :or {html-cache true processed-cache true
+                                from "00000000" until "99999999"}}]]
   (let [handler (create-handler identity options)]
     (handler (s/scrape (seed username from until) :html-cache html-cache :processed-cache processed-cache))))
